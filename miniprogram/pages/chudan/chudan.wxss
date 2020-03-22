@@ -1,0 +1,108 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+} 
+.input_bg{
+    background-color: #F8F8F8;
+    border-radius: 10rpx;
+}
+.btn{
+    background-color: #A65353;
+    margin: 20rpx;
+    border-radius: 10rpx;
+    color:#F8F8F8;
+}
+.line{
+    height: 1rpx;
+    width: 100%;
+    background-color: #A65353;
+    margin: 30rpx 0;
+}
+
+.bodyLock{
+    display:flex;
+    height: 56px;
+    width: 750rpx;
+    border-bottom: 1px solid #F8F8F8;
+    /* flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap; */
+    position: relative;
+}
+
+/* 图片 */
+.userinfo-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: white;
+}
+
+.userinfo-avatar[size] {
+  width: 100rpx;
+}
+
+.userinfo-nickname {
+  font-size: 32rpx;
+  color: #4b535c;
+  background-color: white;
+  background-size: cover;
+  text-align: left;
+  padding-left: 0;
+  margin-left: 10px;
+}
+
+.bz {
+  font-size: 32rpx;
+  color: #0678fa;
+  background-color: white;
+  background-size: cover;
+  text-align: left;
+  padding-left: 0;
+  margin-left: 10px;
+}
+
+.userinfo-nickname::after {
+  border: none;
+}
+
+.userinfo-nickname-wrapper {
+  flex: 1;
+}
+
+/* 框起来 */
+.userinfo, .uploader, .tunnel , .chudan {
+  margin-top: 40rpx;
+  height: 220rpx;
+  width: 100%;
+  background: #fff;
+  border: 0px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 300ms ease;
+}
+
+.userinfo1 {
+  flex-direction: column;
+  /* margin-left: 10px; */
+  margin-top: 40rpx;
+  height: 220rpx;
+  width: 100%;
+  background: #fff;
+  border-left: none;
+  border-right: none;
+  display: flex;
+  align-items: left;
+  transition: all 300ms ease;
+   padding-left: 0px;
+}
+.sp {
+  flex-direction: row;
+}

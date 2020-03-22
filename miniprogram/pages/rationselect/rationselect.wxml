@@ -1,0 +1,94 @@
+<!--miniprogram/pages/rationselect/rationselect.wxml-->
+<view class="container">
+
+ <!-- 方案1 -->
+  <view class="userinfo">      
+  <!--
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"
+      size="default"
+    ></button>
+    --> 
+     <!-- <image  src="../../images/q.jpg"  style="width:225px;height:150px"></image> -->
+     <navigator url="../chudan/chudan" open-type="navigate" class="userinfoo">
+     <view class="userinfooo">
+        <image  src="../../images/q.jpg"  style="width:130px;height:150px"></image>
+     </view>
+    <view class="userinfo-nickname-wrapper">
+      <button class="userinfo-nickname" >
+        <text>
+          产品名称:国寿私家车意外伤害保险（旗舰版)
+          <br/>
+          产品代码：EDA2123
+          <br/>
+          保费：20.0元
+          <br/>
+          保险期间：7天
+        </text>
+      </button>
+    </view>
+     </navigator>
+  </view>
+
+
+   <!-- 方案2-->
+  <view class="userinfo">      
+  
+    <!-- <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"
+      size="default"
+    ></button> -->
+     
+     <navigator url="../chudan1/chudan1" open-type="navigate" class="userinfoo">
+     <view class="userinfooo">
+        <image  src="../../images/w.jpg"  style="width:130px;height:150px"></image>
+     </view>
+    <view class="userinfo-nickname-wrapper">
+      <button class="userinfo-nickname" >
+        <text>
+          产品名称:国寿景点意外伤害保险
+          <br/>
+          产品代码：EDA7845
+          <br/>
+          保费：10.0元
+          <br/>
+          保险期间：3天
+        </text>
+      </button>
+    </view>
+     </navigator>
+  </view>
+
+
+  <view class="userinfo"> 
+    <block>
+      <text></text>
+    </block>
+    <view wx:if="{{length > 5}}"> 1 </view>
+    <view wx:elif="{{length > 2}}"> 2 </view>
+    <view wx:else> 3 </view>
+
+  <!-- 下标变量名默认为 index，数组当前项的变量名默认为 item -->
+    <view wx:for="{{array}}">
+      {{index}}: {{item.message}}
+    </view>
+
+<!-- wx:for-item 指定数组当前元素的变量名,wx:for-index 指定数组当前下标的变量名 -->
+    <view wx:for="{{array}}" wx:for-index="idx" wx:for-item="itemName">
+      {{idx}}: {{itemName.message}}
+    </view>
+    <switch>kl</switch>
+    <!-- <wxs>
+      
+    </wxs> -->
+  </view>
+
+
+
+ </view>  

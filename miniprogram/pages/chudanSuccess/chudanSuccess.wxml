@@ -1,0 +1,21 @@
+<!--miniprogram/pages/chudanSuccess/chudanSuccess.wxml-->
+<!-- <text>miniprogram/pages/chudanSuccess/chudanSuccess.wxml</text> -->
+<view class="container" >
+  <view >
+    <view style="display:flex;" class="bz">
+      <text>
+        尊敬的客户，您已成功投保，基本信息如下：\n
+        保险单号:{{policyNo}}
+        保险费合计:人民币{{totalFee}}
+        被保险人姓名:{{insuredName}}
+        保障项目： {{bztext}}
+        告知单起保时间:{{startdate}} 
+        终保时间{{enddate}} 
+        保险期间{{period}}
+        保险人已同意承保并签发电子保险单，为了保障您的权益，请尽快通过以下方式查询保单信息并下载电子保单：
+          在个人电脑上登录人保财险官网（www.epicc.com.cn），在保单查询功能区录入保单号和被保险人信息。
+        *本查询告知单并非保险单或保险凭证，保险合同以电子保单为准。如果出险，请及时拨打95518报案。
+      </text>
+    </view>  
+  </view>
+</view>

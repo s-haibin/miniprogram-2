@@ -1,0 +1,146 @@
+<view class="container" >
+<!-- <form bindsubmit="chudanform"> -->
+    <view class="userinfo">       
+    <!-- <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"
+      size="default"
+    ></button> -->
+    <view class="userinfooo">
+        <image  src="../../images/q.jpg"  style="width:130px;height:80px"></image>
+     </view>
+    <view class="userinfo-nickname">
+        <text>
+          国寿私家车意外伤害保险（旗舰版)
+          <br/>
+          EDA2123
+        </text>
+    </view>
+    </view>
+
+     <!-- 保障项目 -->
+  <view class="userinfo">
+    <view style="display:flex;" class="bz">
+      <text>
+      <!-- 保障项目：\n 驾驶或搭乘本合同指定的私家车发生 的意外伤害身故、伤残、烧伤 :300000元 \n
+              驾驶或搭乘本合同指定的私家车 发生的意外伤害医疗 :20000元 -->
+             保障项目:\n {{bztext}}
+      </text>
+      <!-- <input bindinput="userName" name="userName" placeholder="请输入姓名！" value="{{userName}}" /> -->
+    </view>  
+  </view>
+
+      <!-- 日期 -->
+  <view class="userinfo1" >
+    <!-- <view style="display:flex;" bindtap="showstartdate"> -->
+    <view style="display:flex;" >
+      <label>保单生效日：</label>
+      <van-button plain type="primary" bind:click="showPopFn" size="small">{{startdate}}</van-button>
+        <van-popup show="{{ show }}"  position="bottom" custom-style="height: 45%;">
+            <van-datetime-picker 
+                type="date"
+                value="{{ currentDate }}"
+                bind:input="onInput"
+                bind:confirm="onConfirm"
+                bind:cancel="onCancel"
+                min-date="{{ minDate }}"
+                formatter="{{ formatter }}"               
+            />
+        </van-popup> 
+      <!-- <input bindinput="userName" name="userName" placeholder="请输入姓名！" value="{{userName}}" /> -->
+    </view>  
+     <view  style="display:flex;" class="userinfo1">
+      <text >保单满期日：{{enddate}}</text>
+      <!-- <van-button plain type="primary" bind:click="showPopFn" size="mini">点击选择日期</van-button>
+<van-popup show="{{ show }}"  position="bottom" custom-style="height: 45%;">
+            <van-datetime-picker 
+                type="date"
+                value="{{ currentDate1 }}"
+                bind:input="onInput1"
+                bind:confirm="onConfirm1"
+                bind:cancel="onCancel1"
+                min-date="{{ minDate1 }}"
+                formatter="{{ formatter }}"
+                
+            />
+        </van-popup>  -->
+      <!-- <input bindinput="userName" name="userName" placeholder="请输入姓名！" value="{{userName}}" /> -->
+
+
+    </view> 
+      <view  style="display:flex;">
+      <label>保险期间：{{period}}</label>
+      <!-- <input bindinput="userName" name="userName" placeholder="请输入姓名！" value="{{userName}}" /> -->
+    </view> 
+  </view>
+
+        <!-- 保额 -->
+  <view class="userinfo">
+    <view style="display:flex;">
+      <text>保额(元)：{{amount}} \n 保费(元)：{{fee}}</text>
+      <!-- <input bindinput="userName" name="userName" placeholder="请输入姓名！" value="{{userName}}" /> -->
+    </view>  
+  </view>
+
+      <!-- 保费 -->
+  <!-- <view class="userinfo">
+    <view style="display:flex;">
+      <label>保费(元)：{{fee}}</label>
+      <input bindinput="userName" name="userName" placeholder="请输入姓名！" value="{{userName}}" />
+    </view>  
+  </view> -->
+
+  
+
+<view class="userinfo1">
+  <view class="bodyLock" style="display:flex;">
+    <label>姓名：</label>
+    <input bindinput="userName" name="userName" placeholder="请输入姓名！" value="{{userName}}" />
+  </view>
+  <view class="bodyLock" style="display:flex;">
+    <label>证件类型：</label>
+    <Select prop-array='{{selectArray}}' bind:myget='getDate'></Select>
+    <!-- <input bindinput="zhenjiantype" name="zhenjiantype" placeholder="请输入证件类型！" value="{{zhenjiantype}}" /> -->
+  </view>
+
+
+   <view class="bodyLock" style="display:flex;">
+    <label>证件号：</label>
+    <input bindinput="zhenjianno" name="zhenjianno" placeholder="请输入证件号！" value="{{zhenjianno}}" type="idcard" />
+  </view>
+   <!-- <view style="display:flex;">
+    <label>{{rartioncode}}</label>
+    <input name="userName" placeholder="请输入证件号！"  />
+  </view> -->
+    <view class="bodyLock" style="display:flex;">
+    <!-- <label>方案代码：</label>
+    <input bindinput="rationcode" name="rationcode" placeholder="请输入方案代码！" value="{{rationcode}}" /> -->
+  </view>
+ </view>
+
+  <button bindtap="bean_json" class="btn">投保</button>
+  <!-- <text>{{policyno}}</text> -->
+
+
+<!-- </form> -->
+
+ <!-- <button bindtap="bean_json" class="btn">出单</button>
+   <button bindtap="listbean_json" class="btn">listbean_json</button>
+  <button bindtap="mapbean_json" class="btn">mapbean_json</button>
+  <view class="line"></view>
+  <form bindsubmit="json_json">
+    <view>
+      <view >username</view>
+      <input name="username" type="text" class="input_bg"/>
+    </view>
+    <view>
+      <view >age</view>
+      <input name="age" type="text" class="input_bg"/>
+    </view>
+    <button formType="submit" class="btn">json_json</button>
+  </form>
+  <text>{{show}}</text>  -->
+
+</view>

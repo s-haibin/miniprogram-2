@@ -1,0 +1,80 @@
+<view class="container" >
+    <view class="userinfo">       
+    <view class="userinfooo">
+        <image  src="../../images/w.jpg"  style="width:130px;height:80px"></image>
+     </view>
+    <view class="userinfo-nickname">
+        <text>
+          国寿景点意外伤害保险
+          <br/>
+          EDA7845
+        </text>
+    </view>
+    </view>
+
+     <!-- 保障项目 -->
+  <view class="userinfo">
+    <view style="display:flex;" class="bz">
+      <text>
+             保障项目:\n {{bztext}}
+      </text>
+    </view>  
+  </view>
+
+      <!-- 日期 -->
+  <view class="userinfo1" >
+    <view style="display:flex;" >
+      <label>保单生效日：</label>
+      <van-button plain type="primary" bind:click="showPopFn" size="small">{{startdate}}</van-button>
+        <van-popup show="{{ show }}"  position="bottom" custom-style="height: 45%;">
+            <van-datetime-picker 
+                type="date"
+                value="{{ currentDate }}"
+                bind:input="onInput"
+                bind:confirm="onConfirm"
+                bind:cancel="onCancel"
+                min-date="{{ minDate }}"
+                formatter="{{ formatter }}"               
+            />
+        </van-popup> 
+    </view>  
+     <view  style="display:flex;" class="userinfo1">
+      <text >保单满期日：{{enddate}}</text>
+    </view> 
+      <view  style="display:flex;">
+      <label>保险期间：{{period}}</label>
+    </view> 
+  </view>
+
+        <!-- 保额 -->
+  <view class="userinfo">
+    <view style="display:flex;">
+      <text>保额(元)：{{amount}} \n 保费(元)：{{fee}}</text>
+    </view>  
+  </view>
+
+ 
+
+<view class="userinfo1">
+  <view class="bodyLock" style="display:flex;">
+    <label>姓名：</label>
+    <input bindinput="userName" name="userName" placeholder="请输入姓名！" value="{{userName}}" />
+  </view>
+  <view class="bodyLock" style="display:flex;">
+    <label>证件类型：</label>
+    <Select prop-array='{{selectArray}}' bind:myget='getDate'></Select>
+    <!-- <input bindinput="zhenjiantype" name="zhenjiantype" placeholder="请输入证件类型！" value="{{zhenjiantype}}" /> -->
+  </view>
+
+
+   <view class="bodyLock" style="display:flex;">
+    <label>证件号：</label>
+    <input bindinput="zhenjianno" name="zhenjianno" placeholder="请输入证件号！" value="{{zhenjianno}}" type="idcard" />
+  </view>
+    <view class="bodyLock" style="display:flex;">
+  </view>
+ </view>
+
+  <button bindtap="bean_json" class="btn">投保</button>
+
+</view>
